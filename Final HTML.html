@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake's Coffee Shop</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Jake's Coffee Shop</div>
+    
+    <div class="nav">
+        <a onclick="showContent('home')">Home</a>
+        <a onclick="showContent('menu')">Menu</a>
+        <a onclick="showContent('music')">Music</a>
+        <a onclick="showContent('jobs')">Jobs</a>
+    </div>
+
+    <div id="home" class="content active">
+        <div class="home-info">
+            <div class="text">
+                <h2>Come in and experience...</h2>
+                <ul>
+                    <li>Specialty Coffee and Tea</li>
+                    <li>Freshly made sandwiches</li>
+                    <li>Bagels, Muffins, and Organic Snacks</li>
+                    <li>Music and Poetry Readings</li>
+                    <li>Open mic nights</li>
+                    <li>...</li>
+                </ul>
+                <p><strong>23 Pine Road</strong><br>Nottingham, NG1 5YU<br>0115 9324567</p>
+            </div>
+            <img src="coffee.jpg" alt="Coffee Cup">
+        </div>
+    </div>
+
+    <div id="menu" class="content">
+        <h2>Our Menu</h2>
+        <p><strong>Hot Beverages:</strong></p>
+        <ul>
+            <li>Espresso – A bold, rich shot of pure coffee ($3.00)</li>
+            <li>Cappuccino – A creamy mix of espresso and frothed milk ($3.50)</li>
+            <li>Latte – A smooth and balanced coffee experience ($4.00)</li>
+        </ul>
+        <p><strong>Pastries & Treats:</strong></p>
+        <ul>
+            <li>Freshly Baked Croissant – Light, flaky, and buttery ($2.50)</li>
+            <li>Chocolate Muffin – Moist and rich chocolate delight ($2.75)</li>
+        </ul>
+    </div>
+
+    <div id="music" class="content">
+        <h2>Live Music & Events</h2>
+        <p>Join us every Friday from 7 PM to 10 PM for live acoustic performances by talented local artists.</p>
+        <p>Enjoy the perfect mix of coffee and music, creating an unforgettable night of relaxation and good vibes.</p>
+    </div>
+
+    <div id="jobs" class="content">
+        <h2>Join Our Team</h2>
+        <p>We’re looking for passionate individuals to be part of our growing family!</p>
+        <p><strong>Available Positions:</strong></p>
+        <ul>
+            <li>Barista – Brew and serve coffee with a smile</li>
+            <li>Cashier – Help customers with their orders</li>
+        </ul>
+        <p>If you're interested, drop off your resume at the counter or email us at <strong>careers@jakescoffee.com</strong>.</p>
+    </div>
+
+    <div class="footer">
+        Copyright © 2011 Jake's Coffee House<br>
+        <a href="mailto:jake@jcoffee.com">jake@jcoffee.com</a>
+    </div>
+</div>
+
+<script>
+    function showContent(sectionId) {
+        let sections = document.querySelectorAll('.content');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
